@@ -3,28 +3,14 @@
         padding: 0;
 }
 
-body {
-        box-sizing: border-box;
-        background-color: rgb(244, 255, 255);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-     
-}
+
 
 .circle {
        height: 400px;
        width: 400px;
      
 }
-.container {
-        height: 100vh;
-        width: 100wv;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-}
+
 
 .fa-solid {
         cursor: pointer;
@@ -35,4 +21,8 @@ body {
 .fa-minus {
         display: flex;
        padding-left: 25px;
+}
+
+.disclaimer {
+        font-weight: lighter;
 }
