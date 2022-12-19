@@ -134,3 +134,22 @@ document.querySelector('.clear').addEventListener('click', ()=> {
         localStorage.clear();
         document.querySelector('ul').innerHTML = ''
 })
+
+const github = document.querySelector('.fa-github');
+const dark = document.querySelector('.dark-mode')
+
+function loadPage(){
+        document.body.style.background = 'white';
+}
+loadPage()
+
+dark.addEventListener('click', ()=> {
+        if(document.body.style.background == 'white'){
+                document.body.style.background = 'black';
+                document.body.style.color = 'white'
+        }else{
+                document.body.style.background= 'white'
+                document.body.style.color ='black'
+        }
+        
+})
