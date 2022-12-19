@@ -14,9 +14,9 @@ body {
 }
 
 .circle {
-        height: 500px;
-        width: 500px;
-        border-radius: 50%;
+       height: 400px;
+       width: 400px;
+     
 }
 .container {
         height: 100vh;
@@ -24,4 +24,15 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+}
+
+.fa-solid {
+        cursor: pointer;
+        padding-left: 5px;
+        
+}
+
+.fa-minus {
+        display: flex;
+       padding-left: 25px;
 }
