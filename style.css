@@ -42,3 +42,7 @@ body {
         position: absolute;
 }
 
+
+.clear {
+        cursor: pointer;
+}

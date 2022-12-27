@@ -4,6 +4,7 @@ const shortBreak = document.querySelector(".shortBreak");
 const longBreak = document.querySelector(".longBreak");
 const remove = document.querySelector(".fa-minus");
 const li = document.querySelector("li");
+const pomo = document.querySelector(".pomo");
 
 li.addEventListener("click", () => {
   li.remove();
@@ -15,6 +16,10 @@ shortBreak.addEventListener("click", () => {
 
 longBreak.addEventListener("click", () => {
   countdown.innerText = "15:00";
+});
+
+pomo.addEventListener("click", () => {
+  countdown.innerText = "25:00";
 });
 
 startBtn.addEventListener("click", () => {
@@ -104,52 +109,49 @@ function addToDo() {
 }
 
 function displayToDos() {
-        // Get the to-do items from local storage
-        let toDos = [];
-        const toDosInStorage = localStorage.getItem("toDos");
-        if (toDosInStorage) {
-          // If there are to-do items in storage, parse them from the string representation
-          toDos = JSON.parse(toDosInStorage);
-        }
-      
-        // Iterate through the to-do items and display them on the page
-        for (const toDo of toDos) {
-          // Create a new list item element
-          const li = document.createElement("li");
-      
-          // Set the inner HTML of the list item to be the to-do item text
-          li.innerHTML = toDo;
-      
-          // Append the list item to the unordered list
-          document.querySelector("ul").appendChild(li);
-        }
-      }
-      
+  // Get the to-do items from local storage
+  let toDos = [];
+  const toDosInStorage = localStorage.getItem("toDos");
+  if (toDosInStorage) {
+    // If there are to-do items in storage, parse them from the string representation
+    toDos = JSON.parse(toDosInStorage);
+  }
+
+  // Iterate through the to-do items and display them on the page
+  for (const toDo of toDos) {
+    // Create a new list item element
+    const li = document.createElement("li");
+
+    // Set the inner HTML of the list item to be the to-do item text
+    li.innerHTML = toDo;
+
+    // Append the list item to the unordered list
+    document.querySelector("ul").appendChild(li);
+  }
+}
 
 window.onload = displayToDos;
 
-
 // clear everything
-document.querySelector('.clear').addEventListener('click', ()=> {
-        localStorage.clear();
-        document.querySelector('ul').innerHTML = ''
-})
+document.querySelector(".clear").addEventListener("click", () => {
+  localStorage.clear();
+  document.querySelector("ul").innerHTML = "";
+});
 
-const github = document.querySelector('.fa-github');
-const dark = document.querySelector('.dark-mode')
+const github = document.querySelector(".fa-github");
+const dark = document.querySelector(".dark-mode");
 
-function loadPage(){
-        document.body.style.background = 'white';
+function loadPage() {
+  document.body.style.background = "white";
 }
-loadPage()
+loadPage();
 
-dark.addEventListener('click', ()=> {
-        if(document.body.style.background == 'white'){
-                document.body.style.background = 'black';
-                document.body.style.color = 'white'
-        }else{
-                document.body.style.background= 'white'
-                document.body.style.color ='black'
-        }
-        
-})
+dark.addEventListener("click", () => {
+  if (document.body.style.background == "white") {
+    document.body.style.background = "black";
+    document.body.style.color = "white";
+  } else {
+    document.body.style.background = "white";
+    document.body.style.color = "black";
+  }
+});
